@@ -48,13 +48,13 @@
         </div>
 
         <!-- DOM Manipulation -->
-        <div id="dom" class="section">
+        <div id="dom" class="section text-center">
             <div class="card">
                 <div class="card-header">DOM Manipulation</div>
                 <div class="card-body">
                     <p id="demoText">Hello, I am Alagbo Tasnim.</p>
-                    <img id="demoImg" src="images/smile.jpg"
-                        class="img-thumbnail mb-3" style="width: 500px; height: 400px;">
+                    <img id="demoImg" src="images/smile.jpg" class="img-thumbnail mb-3"
+                        style="width: 400px; height: 400px;">
                     <div>
                         <button class="btn btn-warning me-2" onclick="changeText()">Change Text</button>
                         <button class="btn btn-info" onclick="changeImage()">Change Image</button>
@@ -63,12 +63,70 @@
             </div>
         </div>
 
+        <!-- Events -->
+        <div id="events" class="section">
+            <div class="card">
+                <div class="card-header">Events</div>
+                <div class="card-body">
+                    <button id="clickBtn" class="btn btn-primary mb-3">Click Me</button>
+                    <p id="eventOutput"></p>
+                    <div class="mt-3 p-3 border" id="hoverBox">
+                        Hover over me
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <script>
         // Switch Sections
         function showSection(id) {
             document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active-section'));
             document.getElementById(id).classList.add('active-section');
         }
+
+        // Arrays & Objects
+        function showArray() {
+            let accessories = ["Aldo necklace", "Bracelets", "Calvin Klein watch"];
+            let output = "Accessories:\n";
+            for (let i = 0; i < accessories.length; i++) {
+                output += (i + 1) + ". " + accessories[i] + "\n";
+            }
+            document.getElementById("arrayOutput").innerText = output;
+        }
+
+        function showObject() {
+            let student = {
+                name: "Tasnim",
+                age: 16,
+                score: 99,
+                grade: "A+"
+            };
+            let output =
+                `Student's Info:\nName: ${student.name}\nAge: ${student.age}\nScore: ${student.score}\nGrade: ${student.grade}`;
+            document.getElementById("arrayOutput").innerText = output;
+        }
+
+        //DOM Manipulation
+        function changeText() {
+            document.getElementById("demoText").innerText = "Xup, I'm learning JavaScript.";
+        }
+
+        function changeImage() {
+            document.getElementById("demoImg").src = "images/sad.jpg";
+        }
+
+        // Events
+        document.getElementById("clickBtn").addEventListener("click", () => {
+            document.getElementById("eventOutput").innerText = "You clicked this button";
+        });
+           document.getElementById("hoverBox").addEventListener("mouseover", () => {
+            document.getElementById("hoverBox").style.backgroundColor = "red";
+        });
+        document.getElementById("hoverBox").addEventListener("mouseout", () => {
+            document.getElementById("hoverBox").style.backgroundColor = "";
+        });
     </script>
 
 
