@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css"
+        integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm" style="background-color: #120d6b;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)"><img src="images/portfolio.png" alt="logo"
+                        style="height: 50px; width: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact.html">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#Services">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#Hero">Hero</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container p-5 my-5 border rounded-4"
+                style=" background-color: #030e21; color: #fff; width: 100vw; height: 100hw;">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>
+                            I am always interested in connecting with professionals all over the globe, exploring new
+                            opportunities and generally impacting the society through my projects. Whether you are
+                            searching for a developer, looking to share ideas, or simply hoping to establish contact, I
+                            would be pleased to hear from you. You can reach out anytime and I will respond as promtly
+                            as possible.
+                        </p>
+                        <p>Address: Abuja Nigeria. <br>Company Email: alagbotasnim@gmail.com. <br>Phone Number:
+                            07018652862. <br>Website: Anything.com.</p>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container mt-3">
+                            <div class="card" style=" background-color: #030e21; color: #fff; ">
+                                <div class="card-body">
+                                    <h2>Send us a message</h2>
+                                    <form action="/action_page.php">
+                                        <div class="mb-3 mt-3">
+                                            <label for="name">Fullname:</label>
+                                            <input type="text" class="form-control" id="Fullname"
+                                                placeholder="Enter Fullname" name="email">
+                                        </div>
+                                        <div>
+                                            <div class="mb-3 mt-3">
+                                                <label for="comment">Message:</label>
+                                                <textarea class="form-control" rows="5" id="comment"
+                                                    name="text"></textarea>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-sm">Send</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class=" d-flex justify-content-center p-3 mt-4" style="background-color: #120d6b">
+        <p class="text-white">Author: Alagbo Tasnim</p>
+        <p><a href="mailto:alagbotasnim@gmail.com">alagbotasnim@gmail.com</a></p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+
+
+    <script>
+        let myBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function () {
+            if (document.body, scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                myBtn.style.opacity = "1";
+                myBtn.style.pointerEvents = "auto";
+            } else {
+                myBtn.style.opacity = "0";
+                myBtn.style.pointerEvents = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"
+        integrity="sha512-Tc0i+vRogmX4NN7tuLbQfBxa8JkfUSAxSFVzmU31nVdHyiHElPPy2cWfFacmCJKw0VqovrzKhdd2TSTMdAxp2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>

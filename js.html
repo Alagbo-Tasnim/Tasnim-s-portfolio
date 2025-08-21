@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Demo</title>
+    <style>
+        body {
+            font-family: system-ui, Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            margin: 4px 6px 10px 0;
+            ;
+        }
+
+        .row {
+            margin: 12px 0;
+        }
+
+        pre,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #111;
+            color: #eee;
+            border-radius: 8px;
+        }
+
+        pre {
+            min-height: 160px;
+        }
+
+        .note {
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        input[type="number"] {
+            width: 90px;
+            padding: 6px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <script>
+        var UserResponse = confirm("Do you agree?");
+        if (UserResponse == true){
+            // user clicked Ok
+        }else {
+           // user clicked Ok
+        }
+      </script> -->
+    <!-- <script>
+        var userValue = prompt("Please enter your name:", "Alagbo Tasnim");
+        if (userValue != null){
+            // user clicked Okay and provided input
+        }else {
+           // user clicked cancel or provided no input
+        }
+      </script> -->
+
+    <!-- <script type="text/javascript">
+        var person = {
+            firstName: "Tasnim",
+            lastName: "Alagbo",
+            age: 9,
+            fullName: function() {
+                return this.firstName + " " + this.lastName
+            },
+            greet: function(){
+                return "Hello, my name is " + this.fullName();
+            },
+            birthday: function(){
+                this.age += 1;
+                return "Happy birthday! Now I am " + this.age + " years old.";
+            }
+        };
+
+        // To Access properties and method
+        console.log(person.firstName);
+        console.log(person.lastName);
+
+        // Using a method to get the fullName
+        console.log(person.fullName());
+
+        // Using a method that greets
+        console.log(person.greet());
+
+        // Using a method that modifies a property (age) and gives a message 
+        console.log(person.birthday());
+      </script> -->
+
+    <!-- <script type="text/javascript">
+        function exampleFunction() {
+            for (var i = 0; i < arguments.length; i++) {
+                console,log(arguments[i]);
+            }
+        }
+
+        exampleFunction("apple", "bannana", "cherry")
+      </script> -->
+
+    <!-- <h1>JavaScript Practice</h1> -->
+
+    <!-- Loop 
+    <h2>Loops</h2>
+    <button onclick="runLoops()"> Run Loop</button>
+    <pre id="loopsOutput"></pre>
+
+     Functions
+    <h2>Functions</h2>
+    <button onclick="runFunctions()">Run Functions</button>
+    <pre id="functionsOutput"></pre> -->
+
+
+
+
+    <!-- <script>
+        // Loops
+        function runLoops() {
+            let output = "";
+
+            // for loop
+            for (let i = 0; i <= 6; i++) {
+                output += `For loop: ${i}\n`;
+            }
+
+            // do..while loop
+            let num = 1;
+            do {
+                output += `Do while: ${num}\n`;
+                num++
+            } while (num <= 5);
+
+            // for.. of loop 
+            let fruits = ["Apple", "Banana", "Orange", "Strawberry"]
+            for (let fruit of fruits) {
+                output += `For...of: ${fruit}\n`;
+            }
+
+            // for...in loop
+            let person = {
+                name: "Tasnim",
+                age: 16
+            };
+            for (let key in person) {
+                output += `For..in: ${key} = ${person[key]}\n`;
+            }
+
+            document.getElementById("loopsOutput").textContent = output;
+        }
+
+        // Functions
+        function runFunctions() {
+            function greet() {
+                return "Hi, I am Alagbo Tasnim.";
+            }
+
+            function add(s, t) {
+                return s + t;
+            }
+
+            function subtract(s, t) {
+                return s - t;
+            }
+
+            function multiply(s, t) {
+                return s * t;
+            }
+
+            function divide(s, t) {
+                return s / t
+            }
+
+
+            let output = "";
+            output += greet() + "\n";
+            output += `Add: ${add(7, 3)}\n`;
+            output += `Subtract: ${subtract(24, 4)}\n`
+            output += `Multiply: ${multiply(6, 5)}\n`
+            output += `Divide: ${divide(400, 10)}\n`
+
+
+            document.getElementById("functionsOutput").textContent = output;
+        }
+    </script> -->
+
+
+    <h1>Loops Demo: <code>+=</code> and <code>\n</code></h1>
+    <p class="note">
+        This demo shows two things:
+        <br> <b>Number += step</b> -> increase a number
+        <br> <b>String += "text\\n"</b> -> adds text to string and starts a new line
+    </p>
+
+    <!-- Output area  -->
+    <pre id="log"></pre>
+
+    <!-- Part A: Click to count -->
+    <div class="row">
+        <h2>Click to count (uses += on a number , and \n for lines )</h2>
+        <button id="inc1">+1</button>
+        <button id="inc5">+5</button>
+        <button id="reset">Reset</button>
+        <p class="note">Each click does <code>count += step</code>. We also do <code>output += "Count is: " + count +
+                "\\n"</code> so each result prints on a new line</p>
+    </div>
+
+    <!--  part B: Run for-loop with controls -->
+    <div class="row">
+        <h2>For Loop Runner</h2>
+        <label>Start: <input type="number" id="start" value="1"></label>
+        <label>End: <input type="number" id="end" value="10"></label>
+        <label>Step: <input type="number" id="step" value="1"></label>
+        <button id="runFor">Run for loop</button>
+        <p class="note">
+            Runs:
+            <code>for (let i = start; 1 &lt; =end; i += step)</code><br>
+            and logs each <code>i</code> on its own line using <code>\n</code>.
+        </p>
+    </div>
+
+    <!-- Part C: While loop example -->
+    <div class="row">
+        <h2>While loop (Countdown)</h2>
+        <label>Start from: <input type="number" id="whileStart" value="5"></label>
+        <button id="runWhile"> Run while loop</button>
+        <p class="note">
+            Runs:
+            <code>while (n &gt; 0) { log(n); n -= 1; }</code>
+        </p>
+    </div>
+
+    <!-- Optional: press enter to increment -->
+    <div class="row">
+        <h2>Bonus) Press Enter to +1</h2>
+        <p class="note">Press the <b>Enter</b> key anywhere on the the page to do <code>count += 1</code> and log a new line
+        </p>
+    </div>
+
+    <script>
+        // Shared "log" that shows new lines
+        let output = ""; // This is the growing string we append to
+        const logE1 = document.getElementById("log");
+
+        function log(line) {
+            // Add the line, then a new line character so the the next message starts on a new line
+            output += line + "\n";
+            logE1.textContent = output; // <pre> respects \n, so each line shows on its row
+        }
+
+        function clearLog() {
+            output = "";
+            logE1.textContent = ""
+        }
+
+        // A) Click to count
+        let count = 0;
+
+        document.getElementById("inc1").addEventListener("click", () => {
+            count += 1; //Number += step
+            log("Count is now: " + count); // String += "... \n" happens inside log()
+        });
+
+        document.getElementById("inc5").addEventListener("click", () => {
+            count += 5; 
+            log("Count jumped by 5 -> " + count);
+        });
+
+        document.getElementById("reset").addEventListener("click", () => {
+            count = 0;
+            clearLog(); 
+            log("Reset. Count = " + count);
+        });
+
+        // Bonous: press Enter to +1
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                count += 1;
+                log("Enter pressed -> Count: " + count);
+            }
+        });
+
+        // B) For loop Runner
+        const startInput = document.getElementById("start");
+        const endInput = document.getElementById("end");
+        const stepInput = document.getElementById("step");
+
+        document.getElementById("runFor").addEventListener("click", () => {
+            const start = Number(startInput.value);
+            const end = Number(endInput.value);
+            const step = Number(stepInput.value || 1) || 1;
+
+            // Safety: avoid infinite loop if step is 0 or wrong direction
+            if (step === 0) {
+                log("Step cannot be 0")
+                return;
+            }
+            if (start <= end && step < 0) {
+                log("Step must be positive when counting up.");
+                return;
+            }
+            if (start >= end && step > 0) {
+                log("Step must be negative when counting down.")
+                return;
+            }
+
+            log(`for (let i = ${start}; i ${start <= end ? "<=" : ">="} ${end}; i += ${step}) { ... }`);
+            if (start <= end) {
+                for (let i = start; i <= end; i += step) {
+                    log("i = " + i);
+                }
+            }
+            log("Done \n"); // extra blank line
+        });
+
+        // --- C) While Loop (countdown)
+        const whileStart = document.getElementById("whileStart");
+        document.getElementById("runWhile").addEventListener("click", () => {
+            let n = Number(whileStart.value);
+            log(`while (n > 0) { log(n); n -= 1; }  //starting at n = ${n}`);
+            while (n > 0) {
+                log("n = " + n);
+                n -= 1; // some idea: n = n - 1
+            }
+            log("Lift off!🚀 \n");
+        });
+    </script>
+
+</body>
+
+</html>
