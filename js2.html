@@ -56,7 +56,8 @@
                     <img id="demoImg" src="images/smile.jpg" class="img-thumbnail mb-3"
                         style="width: 400px; height: 400px;">
                     <div>
-                        <button class="btn btn-warning me-2" onclick="changeText()">Change Text</button>
+                        <button id="clickTextBtn" class="btn btn-warning me-2" onclick="changeText()">Change
+                            Text</button>
                         <button class="btn btn-info" onclick="changeImage()">Change Image</button>
                     </div>
                 </div>
@@ -110,8 +111,13 @@
 
         //DOM Manipulation
         function changeText() {
-            document.getElementById("demoText").innerText = "Xup, I'm learning JavaScript.";
-        }
+            const textElement = document.getElementById("demoText");
+            if (textElement.textContent === "Hello, I am Alagbo Tasnim") {
+                textElement.textContent = "Xup, I'm learning JavaScript";
+            } else {
+                textElement.textContent = "Hello, I am Alagbo Tasnim";
+            }
+        };
 
         function changeImage() {
             document.getElementById("demoImg").src = "images/sad.jpg";
